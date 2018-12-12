@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, timer } from 'rxjs';
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
@@ -6,18 +7,21 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 
 
-export class TimerComponent implements OnInit,OnDestroy {
-  constructor() { 
-    
+export class TimerComponent implements OnInit, OnDestroy {
+  clock: any;
+  constructor() {
+
   }
-  laps:any = [];
+  laps: any = [];
   counter: number;
   timerRef;
   running: boolean = false;
   startText = 'Start';
-  
+
 
   startTimer() {
+    // const source = timer(0, Date.now());
+    // const subscribe = source.subscribe(val => console.log(val));
     console.log("start");
     this.running = !this.running;
     if (this.running) {
@@ -34,8 +38,8 @@ export class TimerComponent implements OnInit,OnDestroy {
       clearInterval(this.timerRef);
     }
   }
-  lapTimeSplit(){
-    let lapTime = (this.counter/1000);
+  lapTimeSplit() {
+    let lapTime = (this.counter / 1000);
     this.laps.push(lapTime);
   }
 
@@ -50,8 +54,8 @@ export class TimerComponent implements OnInit,OnDestroy {
   ngOnDestroy() {
     clearInterval(this.timerRef);
   }
-  ngOnInit(){
-    
+  ngOnInit() {
+
   }
 
 }
