@@ -1,0 +1,22 @@
+
+footer, .content {
+    font-family: Lato;
+  }
+  
+  .header{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+  }
+  
+  .ascii-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .footer{
+    text-align: right;
+    margin-top: 2em;
+    font-size: 0.8rem;
+  }

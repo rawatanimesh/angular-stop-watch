@@ -1,0 +1,26 @@
+<div class="container">
+	<section class="timer-counter-label">
+		<div *ngIf="counter; else elseBlock">
+      <br>Milli sec {{counter}} </div> 
+    <br>
+    <br>
+    <div *ngIf="counter; else elseBlock">
+     <br> Secs {{counter/1000}} </div>
+    <div *ngIf="counter>60000">
+      <br> Minutes {{counter/60000}}
+    </div>
+		<ng-template #elseBlock> Press Start </ng-template>
+	</section>
+	<section class="timer-button-container">
+		<button class="timer-button" (click)="startTimer()">
+  {{ startText }}
+</button>
+<button class="timer-button" (click)="lapTimeSplit()">Lap</button>
+		<button class="timer-button" (click)="clearTimer()">Clear</button>
+    <br>
+    <div *ngFor="let lap of laps;let i = index">
+    <div>Lap {{i+1}} :: {{lap}}</div>
+    <br>
+    </div>
+	</section>
+</div>
