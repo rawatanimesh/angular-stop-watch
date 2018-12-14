@@ -2,7 +2,7 @@
 
 Light weight Stop-Watch application using Angular 7 without external libraries/dependencies
 
-![alt text](src/assets/stopwatch.png)
+![alt text](img/stopwatch.png)
 
 ## Demo
 
