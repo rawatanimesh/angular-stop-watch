@@ -38,7 +38,7 @@ Example :
 <button (click)="_start = false">Clear</button>
 ```
 ### timer.component.ts
-`
+``` typescript
 import { Component, OnInit, OnDestroy, Input, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-timer',
@@ -77,8 +77,6 @@ export class TimerComponent implements OnInit, OnDestroy {
 
 
   startTimer() {
-    // const source = timer(0, Date.now());
-    // const subscribe = source.subscribe(val => console.log(val));
     this.running = !this.running;
     if (this.running) {
       this.startText = 'Stop';
@@ -132,10 +130,10 @@ export class TimerComponent implements OnInit, OnDestroy {
   }
 
 }
-`
+```
 
 ### timer.component.html
-`
+``` typescript
 <div class="container">
 	<section class="timer-counter-label">
 		<div *ngIf="counter" [ngClass]="{blink: !running}">
@@ -157,10 +155,10 @@ export class TimerComponent implements OnInit, OnDestroy {
 		</div>
 	</div>
 </div>
-`
+```
 
 ### timer.component.scss
-`
+``` typescript
 .container {
     text-align: center;
     font-family: Lato;
@@ -206,7 +204,7 @@ export class TimerComponent implements OnInit, OnDestroy {
       opacity: 0;
     }
   }
-`
+```
 
 
 ## Author
