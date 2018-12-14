@@ -2,13 +2,15 @@
 
 Light weight Stop-Watch application using Angular 7 without external libraries/dependencies
 
-# Demo
+## Demo
 
-You may want to have a look at the demo https://split-lap-stopwatch.stackblitz.io/
+Checkout the [Demo](https://split-lap-stopwatch.stackblitz.io/) on StackBlitz
 
-# Adding the component in your project
+## Adding the component in your project
 
+```
 <app-timer [start]="_start" [showTimerControls]="true"></app-timer>
+```
 
 ## Development server
 
