@@ -12,6 +12,7 @@ _start: boolean=false;
 
   ngOnInit(){
   }
+
   start(){
     this._start=true;
   }

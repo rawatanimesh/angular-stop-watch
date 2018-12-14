@@ -4,14 +4,14 @@
 	</div>
 	<hr />
 	<div>
+		<!-- reusable component with contol options -->
 		<app-timer [start]="_start" [showTimerControls]="true"></app-timer>
 	</div>
 
 	<!-- use these buttons for custom functionality  -->
 	<!-- <div>
-		<button (click)="start()">Start</button>
-		<button (click)="lapTime()">Lap</button>
-		<button (click)="clear()">Clear</button>
+		<button (click)="_start = true">Start</button>
+		<button (click)="_start = false">Clear</button>
 	</div> -->
 
 </div>

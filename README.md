@@ -1,6 +1,14 @@
 # StopWatch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+Light weight Stop-Watch application using Angular 7 without external libraries/dependencies
+
+# Demo
+
+You may want to have a look at the demo https://split-lap-stopwatch.stackblitz.io/
+
+# Adding the component in your project
+
+<app-timer [start]="_start" [showTimerControls]="true"></app-timer>
 
 ## Development server
 
