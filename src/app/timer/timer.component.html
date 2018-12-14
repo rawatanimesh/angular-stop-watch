@@ -1,26 +1,23 @@
 <div class="container">
 	<section class="timer-counter-label">
-		<div *ngIf="counter; else elseBlock">
-      <br>Milli sec {{counter}} </div> 
-    <br>
-    <br>
-    <div *ngIf="counter; else elseBlock">
-     <br> Secs {{counter/1000}} </div>
-    <div *ngIf="counter>60000">
-      <br> Minutes {{counter/60000}}
-    </div>
-		<ng-template #elseBlock> Press Start </ng-template>
+		<div *ngIf="counter" [ngClass]="{blink: !running}">
+			<span>{{minutes}}:</span><span>{{seconds}}:</span> <span>{{milliseconds}}</span> </div>
+		<div *ngIf="!counter">
+			<!-- <span class="blink timer-start-text">Press Start</span> -->
+			<!-- <br> -->
+			<span>{{minutes}}:</span><span>{{seconds}}:</span> <span>{{milliseconds}}</span>
+		</div>
 	</section>
-	<section class="timer-button-container">
+	<div class="timer-button-container" *ngIf="showTimerControls">
 		<button class="timer-button" (click)="startTimer()">
-  {{ startText }}
-</button>
-<button class="timer-button" (click)="lapTimeSplit()">Lap</button>
+			{{ startText }}
+		</button>
+		<button [disabled]='!counter' [ngClass]="{'disabled': !counter}" class="timer-button" (click)="lapTimeSplit()">Lap</button>
 		<button class="timer-button" (click)="clearTimer()">Clear</button>
-    <br>
-    <div *ngFor="let lap of laps;let i = index">
-    <div>Lap {{i+1}} :: {{lap}}</div>
-    <br>
-    </div>
-	</section>
+		<br>
+		<div *ngFor="let lap of laps;let i = index">
+			<div> &#9873; <b>Lap {{i+1}} ::</b>  {{lap}}</div>
+			<br>
+		</div>
+	</div>
 </div>
