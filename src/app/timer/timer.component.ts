@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, Input, SimpleChanges } from '@angular/core';
-// import { Observable, timer } from 'rxjs';
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
@@ -45,9 +44,6 @@ export class TimerComponent implements OnInit, OnDestroy {
       const startTime = Date.now() - (this.counter || 0);
       this.timerRef = setInterval(() => {
         this.counter = Date.now() - startTime;
-        // console.log(Date.now());
-        // console.log(startTime);
-        // console.log(this.counter);
         this.milliseconds = Math.floor(Math.floor(this.counter % 1000) / 10).toFixed(0);
         this.minutes = Math.floor(this.counter / 60000);
         this.seconds = Math.floor(Math.floor(this.counter % 60000) / 1000).toFixed(0);
