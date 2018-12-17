@@ -23,11 +23,6 @@ declarations: [
   ]
 `
 
-Provider
-`
-providers: [ TimerComponent ]
-`
-
 ### Add selector in HTML
 ```
 <app-timer [start]="_start" [showTimerControls]="true"></app-timer>
