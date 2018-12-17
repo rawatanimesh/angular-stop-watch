@@ -1,0 +1,4 @@
+This file contains a list of people who have made large contributions to the open source project.
+
+Original Design and Development By:
+Animesh Rawat <animesh.rawat20@gmail.com>

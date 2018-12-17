@@ -6,7 +6,7 @@ Light weight Stop-Watch application using Angular 7 without external libraries/d
 
 ## Demo
 
-Checkout the [Demo](https://split-lap-stopwatch.stackblitz.io/) on StackBlitz
+Checkout the demo on StackBlitz - https://split-lap-stopwatch.stackblitz.io/ 
 
 ## Adding the component in your project
 
